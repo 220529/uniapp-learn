@@ -1,0 +1,22 @@
+# 依赖
+node_modules/
+
+# 编译输出
+unpackage/
+dist/
+build/
+
+# 日志
+*.log
+
+# 本地配置
+.DS_Store
+.idea/
+.vscode/
+
+# HBuilderX生成的临时文件
+*.bak
+*.tmp
+
+# 其他常见忽略
+.env* 
