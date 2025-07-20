@@ -4,23 +4,33 @@
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view>
+		<MyButton text="测试按钮" @click="onBtnClick" />
+		<MyCard title="easycom卡片">
+			<text>这是通过easycom自动引入的卡片组件内容。</text>
+		</MyCard>
 	</view>
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
-				title: 'Hello'
-			}
-		},
-		onLoad() {
+import MyButton from '@/components/MyButton.vue'
+export default {
+	components: {
+		MyButton
+	},
+	data() {
+		return {
+			title: 'Hello'
+		}
+	},
+	onLoad() {
 
-		},
-		methods: {
-
+	},
+	methods: {
+		onBtnClick() {
+			uni.showToast({ title: '按钮被点击了', icon: 'none' });
 		}
 	}
+}
 </script>
 
 <style>
